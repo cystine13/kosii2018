@@ -1,0 +1,26 @@
+Sub 하이퍼링크_시트()
+    For i = 2 To 33
+      Range("A" & CStr(i)).Select
+      Subadd = Sheets(i).Name
+      ActiveSheet.Hyperlinks.Add Anchor:=Selection, Address:="", SubAddress:=Subadd & "!A1"
+    Next i
+End Sub
+
+Sub 시트이동복사_파일내()
+    For i = 2 To 31
+      Sheets(i).Copy After:=Sheets(i + 29)
+    Next i
+End Sub
+
+Sub 시트이동복사_파일간()
+    For i = 84 To 165
+      Workbooks("한국여성정책연구원 여성관리자패널조사.xlsx").Sheets(CStr(i)).Copy After:=Workbooks("여성관리자패널조사(20181208).xlsx").Sheets(i)
+    Next
+End Sub
+
+Sub 시트이름바꾸기()
+    For i = 82 To 99
+        sheet_nm = Range("A" & CStr(i)).Value
+        Sheets(i).Name = sheet_nm
+    Next i
+End Sub
