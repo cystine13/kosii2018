@@ -15,37 +15,47 @@
       color:blue;
     }
   </style>
+    <script>
+    function LinksSetColor(color){
+      var alist = document.querySelectorAll('a');
+      var i = 0 ;
+      while(i<alist.length){
+      console.log(alist[i]);
+      alist[i].style.color=color;
+      i=i+1;
+      }
+    }
+
+    function BodySetColor(color){
+      document.querySelector('body').style.color = color;
+    }
+
+    function BodySetBackgroundColor(color){
+      document.querySelector('body').style.backgroundColor = color;
+    }
+    function nightDayHandler(self){
+    var target = document.querySelector('body')
+    if(self.value === 'night') {
+    Body.setBackgroundColor('black');
+    Body.setColor('white');
+    self.value = 'day';
+
+    Links.setColor('powderblue');
+
+  } else {
+    Body.setBackgroundColor('white');
+    Body.setColor('black');
+    self.value = 'night';
+
+    Links.setColor('blue');
+  }
+}
+    </script>
 </head>
 
 <body>
-  <input type="button" value="night" onclick="
-  var target = document.querySelector('body')
-  if(this.value === 'night') {
-  target.style.backgroundColor = 'black';
-  target.style.color = 'white';
-  this.value = 'day';
-
-  var alist = document.querySelectorAll('a');
-  var i = 0 ;
-  while(i<alist.length){
-  console.log(alist[i]);
-  alist[i].style.color='powderblue';
-  i=i+1;
-  }
-} else {
-  target.style.backgroundColor = 'white';
-  target.style.color = 'black';
-  this.value = 'night';
-
-  var alist = document.querySelectorAll('a');
-  var i = 0 ;
-  while(i<alist.length){
-  console.log(alist[i]);
-  alist[i].style.color='blue';
-  i=i+1;
-  }
-}
-  ">
+  <input type="button" value="night" onclick="nightDayHandler(this);">
+  <input type="button" value="night" onclick="nightDayHandler(this);">
     <h1><a href="index.html">공표자료</a></h1>
   <ul>
     <li><a href="1.html">중앙행정기관</a></li>
@@ -67,23 +77,6 @@
   사회적 역할과 책임을 다하고 있습니다.또한,<span class="js">"건강보험과 보건의료의 발전을 통한 국민 건강 증진"</span>이라는 목표를 실현하기 위해 열린 전문역량을 토대로 업무에 임하고 있으며,
   언제나 국민을 최우선의 가치로 두고 국민의 건강하고 행복한 삶에 기여하고자 노력하고 있습니다.심사평가원 임직원은 국민에게 신뢰받는 글로벌 수준의 국민의료평가기관이라는 분명한 사명감을 가지고 국민 여러분의 모든 관심과 조언에 귀를 기울여보다 건강하고 안전한 우리나라 의료문화를 가꾸어 나가는데 최선을 다하겠습니다.
 </p>
-<input type="button" value="night" onclick="
-if(this.value === 'night') {
-document.body.style.backgroundColor = 'black';
-document.querySelector('body').style.color = 'white';
-this.value = 'day';  } else {
-document.querySelector('body').style.backgroundColor = 'white';
-document.querySelector('body').style.color = 'black';
-this.value = 'night';}
-">
-<input type="button" value="night" onclick="
-if(this.value === 'night') {
-document.body.style.backgroundColor = 'black';
-document.querySelector('body').style.color = 'white';
-this.value = 'day';  } else {
-document.querySelector('body').style.backgroundColor = 'white';
-document.querySelector('body').style.color = 'black';
-this.value = 'night';}
-">
+<input type="button" value="night" onclick="nightDayHandler(this);">
 </body>
 </html>
