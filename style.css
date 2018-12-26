@@ -8,13 +8,13 @@
 
   #grid{
   display:grid;
-  grid-template-columns: 150px 1fr;
+  grid-template-columns: 200px 1fr;
   }
 
   #leftmenu{
   border-right:1px solid gray;
   }
-  
+
   #rightmenu{
   padding-left:10px;
   }
