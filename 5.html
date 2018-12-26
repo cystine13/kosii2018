@@ -3,10 +3,30 @@
 <head>
   <title>공표자료 - 연구기관</title>
   <meta charset="utf-8">
+  <style>
+  h1{
+    font-size:45px;
+    text-align: center;
+    border-bottom:1px solid gray;
+    margin:0;
+    padding:20px;
+  }
+    #grid{
+      /* border:5px solid pink; */
+      display:grid;
+      grid-template-columns: 150px 1fr;
+    }
+    #leftmenu{
+      border-right:1px solid gray;
+    }
+  </style>
 </head>
 
 <body>
   <h1><a href="index.html">공표자료</a></h1>
+  <div id="grid">
+  <div id="leftmenu">
+  <h2>기관유형</h2>
   <ul>
     <li><a href="1.html">중앙행정기관</a></li>
     <li><a href="2.html">지방자치단체</a></li>
@@ -16,6 +36,8 @@
     <li><a href="6.html">협회/조합</a></li>
     <li><a href="7.html">기타기관</a></li>
   </ul>
+</div>
+<div>
   <h2>연구기관</h2>
   <ul>
     <li>(재)한국정보통신산업연구원</li>
@@ -88,6 +110,7 @@
     <li>한국환경산업기술원</li>
     <ul><li><a href="http://www.keiti.re.kr/home/index.do" target="_blank">환경기술실태조사</a></li></ul>
   </ul>
-
+</div>
+</div>
 </body>
 </html>
