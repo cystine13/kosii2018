@@ -18,3 +18,8 @@
   #rightmenu{
   padding-left:10px;
   }
+
+  #grid2{
+  display:grid;
+  grid-template-columns: 200px 300px 1fr;
+  }
